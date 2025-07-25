@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Admin Book Container */
+.admin-feedback-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Admin Welcome Bar Styling */
+.adfeed-welcome-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #001f3f, #1a2a6c, #537895);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 50px;
+    width: calc(100% - 60px);
+    z-index: 1;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: -03px;
+
+}
+.adfeed-content{
+  margin-left: 250px; /* Ensure content is shifted to the right of the sidebar */
+  padding: 20px;
+  padding-left: 20px; /* Space between content and sidebar */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  flex-grow: 1;
+  margin-left: 260px;
+}
+
+/* Welcome Image Styling */
+.adfeed-welcome-image {
+    width: 300px; /* Size of the image reduced */
+    height: 100%;
+    background-image: url('../../../../Assets/feedback.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 0px;
+}
+
+/* Welcome Text Styling */
+.adfeed-welcome-text {
+    color: white;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.adfeed-welcome-text h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 2px white;
+    text-align: left;
+}
+
+.adfeed-welcome-text p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    color: white;
+    text-align: left;
+    line-height: 1.5;
+    margin-left: 0px;
+}
+
+
+  
+  /* Table styling */
+  .admin-feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .admin-feedback-table thead {
+    background-color:#007bff;;
+    color: #ffffff;
+    height: 70px;
+  }
+  
+  .admin-feedback-table th {
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .admin-feedback-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .admin-feedback-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .admin-feedback-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Button styling */
+  .delete-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Empty state styling */
+  .admin-feedback-table tbody tr td[colspan="6"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .adbook-welcome-bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .adbook-welcome-image img {
+      margin-top: 10px;
+    }
+  
+    .admin-feedback-table th,
+    .admin-feedback-table td {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .delete-button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  

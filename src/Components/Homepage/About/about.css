@@ -1,0 +1,67 @@
+.about-page {
+    background-color: #f0f0f0; /* Light grey fallback color */
+    background-image: url(../../../Assets/1000025696.jpg);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Full viewport height for the page */
+    width: 100vw; /* Full viewport width for the page */
+    position: relative; /* Ensure the container can position child elements correctly */
+    padding-top: 20px;
+}
+/* Main about container with grey background */
+.about-container {
+    padding: 40px; /* More padding for a spacious layout */
+    margin-top: 180px; /* Adjust based on your navbar height */
+    background-color: var(--whiteColorDeam);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    max-width: 800px; /* Limit the width for better readability */
+    margin-left: auto; /* Centering */
+    margin-right: auto; /* Centering */
+    text-align: center; /* Centering text */
+}
+
+/* Paragraph text style */
+.about-container p {
+    color: black ;
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.features {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    margin-bottom: 40px; /* Space below features */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+}
+
+/* Inner feature items */
+.feature-item {
+    flex: 1; /* Allow equal width */
+    padding: 20px; /* Padding inside each feature */
+    background: rgba(30, 30, 30, 0.85); /* Lighter black background for inner boxes */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for hover effect */
+    margin: 10px; /* Space between boxes */
+}
+
+/* Hover effect for inner boxes */
+.feature-item:hover {
+    transform: translateY(-5px); /* Raise on hover */
+}
+
+/* Feature icon styles */
+.feature-icon {
+    font-size: 2rem; /* Size of icons */
+    color: #FFFFFF; /* White color for icons */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+/* Feature item text style */
+.feature-item p {
+    color: #FFFFFF; /* White for feature descriptions */
+    line-height: 1.5; /* Improve readability */
+}
+

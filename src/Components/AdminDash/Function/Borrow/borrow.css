@@ -1,0 +1,176 @@
+/* Welcome Bar Styling */
+.adfeed-welcome-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between text and image */
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #001f3f, #1a2a6c, #537895);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  min-height: 60px;
+  width: 99%;
+}
+
+/* Welcome Text Styling */
+.adfeed-welcome-text {
+  color: white;
+  flex-grow: 1;
+  margin-right: 50px; /* Adjusted for better spacing */
+  margin-left: 220px; /* Increased margin to shift the block further right */
+  text-align: left; /* Aligns the text inside the block to the left */
+}
+
+
+.adfeed-welcome-text h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 1px 1px 2px black;
+}
+
+.adfeed-welcome-text p {
+  font-size: 16px;
+  margin-top: 5px;
+  color: white;
+}
+
+/* Welcome Image Styling */
+.adfeed-welcome-image img {
+  max-width: 220px; /* Ensures the image fits well */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Container Styling */
+.adfeed-content {
+  padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Add Record Button Styling */
+.add-record-button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.add-record-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-record-btn:hover {
+  background-color: #218838;
+}
+
+/* Add Record Form Styling */
+.add-record-form {
+  max-width: 600px; /* Adjust the form width */
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if space is tight */
+  justify-content: space-between; /* Distribute items across the row */
+  align-items: center; /* Vertically align items */
+}
+
+.add-record-form input {
+  width: calc(50% - 10px); /* Make input fields take up half of the available space */
+  padding: 10px;
+  margin: 10px 5px 10px 0; /* Space out the inputs */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-record-form button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 48%; /* Make the buttons fit within the form row */
+}
+
+/* Button styling for Add/Update and Cancel */
+.add-record-form .add-record-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.add-record-form .cancel-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.add-record-form .cancel-btn:hover {
+  background-color: #c82333;
+}
+
+/* Admin Borrow Table Styling */
+.admin-borrow-table {
+  width: 100%; /* Reduce table width */
+  margin: 20px 10px 20px auto; /* Add a small left margin and maintain auto alignment for the right */
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensure columns have a fixed width */
+}
+
+.admin-borrow-table th,
+.admin-borrow-table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.admin-borrow-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.admin-borrow-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-borrow-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-borrow-table td {
+  text-align: center;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-btn:hover {
+  background-color: blue;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,227 @@
+/* Navbar container */
+.top-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space items evenly */
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px;
+  }
+  
+  /* Search bar adjustment */
+  .search-bar {
+    flex-grow: 1; /* Take up remaining space */
+    margin: 0 20px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f1f4f8;
+    color: #333;
+  }
+  
+  /* Filter button styling */
+  .filter-button {
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Filter dropdown styling */
+  .filter-dropdown {
+    position: absolute;
+    top: 60px; /* Adjust position to be below the navbar */
+    right: 200px; /* Position to align with filter button */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 100;
+    width: 150px;
+  }
+  
+  /* Adjusting profile icon and other icons */
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .username {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .suggestions {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 400px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-left: 150px;
+    z-index: 2;
+  }
+  
+  .suggestions h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .suggestions ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .suggestions li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .suggestions li:hover {
+    background-color: #f0f0f0;
+  }  
+  .tabs {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #334d6e;
+    transition: background 0.3s;
+  }
+  
+  .tab:hover, .tab.active {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    color: white;
+  }
+ 
+  
+  /* Submenu styling */
+  .submenu {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+  
+  .submenu li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submenu li:hover {
+    background-color: #eaeaea;
+  }
+
+
+.suggest-box {
+  position: absolute;
+  top: -10px; /* Positioning it above the icon */
+  left: 35px; /* Positioning the box near the icon */
+  padding: 5px 10px;
+  background-color: grey;
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+  display: none; /* Initially hidden */
+  z-index: 2;
+  white-space: nowrap; /* Prevent text wrapping */
+  min-width: 100px; /* Ensure enough width for the text */
+  max-width: 200px; /* Maximum width to avoid overflow */
+  text-overflow: ellipsis; /* Adds "..." if text overflows */
+  overflow: auto; /* Hide overflowed content */
+}
+
+.suggest-box.show {
+  display: block; /* Show the suggestion box when the class 'show' is added */
+}
+
+/* Show suggestion box only when hovering over the icon (on collapsed sidebar) */
+.sidebar:not(.expanded) .suggest-box {
+  display: block; /* Show the suggestion box when hovering over the icon */
+}
+
+.menu-icon {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+/* Navbar Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  color: #007bff;
+}
+
+.grey-option {
+  color: grey !important;
+}
+.grey-option {
+  color: grey; /* Text color */
+}
+
+.grey-option a {
+  color: grey; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.grey-option a:hover {
+  color: darkgrey; /* Optional hover effect */
+}
+
+.grey-option i {
+  color: grey; /* Icon color */
+}
+
+.grey-option:hover {
+  background-color: #f5f5f5; /* Optional hover background for better UX */
+}
+

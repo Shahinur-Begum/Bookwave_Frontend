@@ -1,0 +1,254 @@
+.member-container {
+  padding: 20px;
+}
+
+.member-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.member-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.member-input {
+  margin-right: 10px;
+  width: 300px;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.member-card {
+  width: 300px;
+  background-color: #f5f5f5;
+}
+
+.member-name {
+  font-size: 18px;
+}
+
+.member-delete-button {
+  margin-top: 10px;
+}
+/* Welcome Banner */
+.mem-welcome {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #001f3f, #1a2a6c, #537895);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px 20px 5px; /* Adjust for layout consistency */
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Content Section */
+.mem-welcome-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* Welcome Header */
+.mem-welcome-content h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 35px;
+  margin: 0;
+  font-weight: bold;
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+/* Welcome Text */
+.mem-welcome-content p {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  margin-top: 8px;
+  color: white;
+  line-height: 1.5;
+  max-width: 450px; /* Limit width for better readability */
+}
+
+/* Welcome Image */
+.mem-welcome-image {
+  width: 400px;
+  height: 150px;
+  background-image: url('../../../../Assets/member.jpg'); /* Add the actual image path */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Ensure the body doesn't overflow */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+
+}
+
+/* Ensure the sidebar doesn't push the content */
+.admins-dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Prevent any scrollbars */
+}
+
+/* Sidebar Styling */
+.admins-sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  overflow: auto;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Main content should take the rest of the screen space */
+.admins-main-content {
+  margin-left: 250px; /* Sidebar width */
+  padding: 20px;
+  flex-grow: 1;
+ overflow-x: hidden;
+}
+
+/* Prevent the table from being larger than the container */
+.member-table-container {
+  max-height: 80vh;
+  overflow-y: auto; /* Add vertical scroll if the table content overflows */
+}
+.mem-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.memnavbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.memicon-button {
+  color: white;
+  margin-right: 10px;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+/* Styling for the center part of the navbar where the search bar goes */
+.memnavbar-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the search bar itself */
+.memnavbar-search {
+  width: 50%; /* Adjust width according to need */
+  max-width: 500px; /* Max width */
+  padding-right: 20px; /* Padding for the right side */
+  background-color: aliceblue;
+}
+
+/* member.css */
+.member-table-container .MuiTableCell-root {
+  padding: 10px 16px;
+}
+.member-table-container .MuiIconButton-root {
+  margin: 0 4px;
+}
+.member-add-button{
+
+  background-color: blue !important;
+}
+
+/* Edit Button */
+.memedit-button {
+background-color: #4caf50 !important;
+color: white; /* White text */
+border-radius: 5px; /* Rounded corners */
+padding: 5px;
+transition: background-color 0.3s ease;
+}
+
+.memedit-button:hover {
+background-color: #45a049; /* Darker green on hover */
+}
+
+/* Delete Button */
+.memdelete-button {
+background-color: #f44336 !important;
+color: white; /* White text */
+border-radius: 5px; /* Rounded corners */
+padding: 5px;
+transition: background-color 0.3s ease;
+}
+
+.memdelete-button:hover {
+background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Cancel Button */
+.cancel-button {
+color: black !important; /* Force black text color */
+background-color: white !important; /* Ensure white background */
+border: 1px solid black !important; /* Add a visible border */
+text-transform: none !important; /* Maintain text casing */
+padding: 6px 12px; /* Add padding for a better appearance */
+transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+background-color: #e0e0e0 !important; /* Light grey on hover */
+}
+
+/* Save Button (edit form button) */
+.save-button {
+background-color: #4caf50 !important; /* Green background */
+color: white !important;
+border-radius: 5px;
+padding: 6px 12px;
+text-transform: none;
+transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+background-color: #45a049 !important; /* Darker green on hover */
+}
+
+/* Cancel Button (edit form) */
+.cancel-edit-button {
+background-color: white !important;
+color: black !important;
+border: 1px solid black !important;
+text-transform: none !important;
+padding: 6px 12px;
+transition: background-color 0.3s ease;
+}
+
+.cancel-edit-button:hover {
+background-color: #e0e0e0 !important; /* Light grey on hover */
+}

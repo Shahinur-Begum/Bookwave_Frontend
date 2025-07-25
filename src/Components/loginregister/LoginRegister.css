@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+
+.auth-container {
+    font-family: "Poppins", sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../Assets/1000025696.jpg');
+    background-size: cover;  /* Cover the entire area */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Ensure it takes the full viewport height */
+    margin: 0; /* Remove default margin */
+    position: relative;
+}
+.wrapper{
+    position:relative;
+    width:420px;
+    height: 470px;
+    background:transparent;
+    border:2px solid rgba(255,255,255,.1);
+    backdrop-filter: blur(30px);
+    border-radius: 10px ;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: #fff;
+    display:flex;
+    align-items: center;
+    transition:height .2s ease;
+    overflow: hidden;
+    flex-direction: column;
+}
+ .wrapper.active{
+    height: 520px;
+ }
+
+.wrapper .form-box{
+    width:100%;
+    padding:40px;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+}
+.wrapper .form-box.login{
+    transition: translate .18s ease;
+    translate:0;
+    overflow-y: hidden;
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    translate: -400px;
+}
+.wrapper .form-box.sign-up{
+    position:absolute;
+    translate: 400px;
+}
+.wrapper.active .form-box.sign-up{
+    transition: translate .18s ease;
+    translate:0;
+}
+
+form h1{
+    font-size:36px;
+    text-align: center;
+}
+
+form .input-box{
+    position: relative;
+    width: 100%;
+    height:50px;
+    margin:30px 0;
+
+}
+
+.input-box input{
+    width: 100%;
+    height:100%;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.1);
+    border-radius:40px !important;
+    font-size: 16px;
+    color:#fff !important;
+    padding:20px 20px 20px 20px;
+
+}
+
+.input-box input::placeholder{
+    color:#fff !important
+}
+
+.input-box .icon{
+    position: absolute;
+    right:20px;
+    top:60%;
+    translate: 0-50%;
+    font-size:20px; 
+}
+.input-box .icon + .icon {
+    margin-right: 30px; /* Space between the lock and eye icons */
+}
+
+form .remember-forgot{
+    display:flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin:-15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.remember-forgot a{
+    color:#fff;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+form button{
+    width:100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius:40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor:pointer;
+    font-size:16px;
+    color:#333;
+    font-weight: 700;
+}
+
+form .signup-link{
+    font-size:14.5px ;
+    text-align: center;
+    margin:20px 0 15px;
+
+}
+
+.signup-link p a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.signup-link p a:hover{
+    text-decoration: underline;
+}
+/* Container to align department and batch fields side by side */
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between the two fields */
+}
+
+.input-box.half {
+    flex: 1;
+}
+
+/* Ensure consistent padding and alignment */
+.input-box.half select {
+    width: 100%; /* Full width of the parent container */
+    height: auto; /* Automatically adjusts to content */
+    background: transparent !important; /* Transparent background */
+    border: 1px solid #fff; /* Light border */
+    border-radius: 40px; /* Rounded corners */
+    font-size: 16px; /* Standard font size */
+    color: #fff !important; /* White text color */
+    padding: 15px 15px; /* Inner spacing for better alignment */
+    outline: none; /* Remove outline on focus */
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+
+.toggle-label {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center align items vertically */
+    font-size: 16px; /* Font size for the label */
+    gap: 10px; /* Space between the text and the toggle */
+    margin-top: 10px; /* Add some space from the top if needed */
+}
+
+/* Hide the actual checkbox input */
+.toggle-checkbox {
+    display: none; /* Hides the default checkbox */
+}
+
+/* Slider Style for Toggle */
+.slider {
+    width: 40px; /* Width of the slider */
+    height: 20px; /* Height of the slider */
+    background-color: #ccc; /* Background color of the slider */
+    border-radius: 15px; /* Rounded corners */
+    position: relative; /* Position relative for inner circle */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+/* Circle inside the slider */
+.slider::after {
+    content: ""; /* Empty content for pseudo-element */
+    width: 18px; /* Width of the inner circle */
+    height: 18px; /* Height of the inner circle */
+    border-radius: 50%; /* Fully rounded circle */
+    background-color: #fff; /* Color of the inner circle */
+    position: absolute; /* Position absolute for moving it */
+    top: 1px; /* Aligns the circle vertically */
+    left: 1px; /* Aligns the circle to the left */
+    transition: transform 0.3s; /* Transition for moving effect */
+}
+
+/* Checked state for the toggle */
+.toggle-checkbox:checked + .slider {
+    background-color: #4caf50; /* Green background for "on" state */
+}
+
+.toggle-checkbox:checked + .slider::after {
+    transform: translateX(20px); /* Moves the circle to the right */
+}
+
+.gender-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    margin-top: 10px; /* Space from the top */
+}
+
+.gender-label {
+    font-size: 16px; /* Font size for the label */
+    font-weight: bold; /* Make the label bold */
+    margin-right: 20px; /* Space to the right of the label */
+    color: white; /* Color for the label */
+}
+
+.gender-selection {
+    display: flex; /* Align gender options side by side */
+    gap: 100px; 
+}
+
+.gender-option {
+    display: flex; /* Use flex to align checkbox and text */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Needed for positioning the checkmark */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 15px 15px; /* Padding around the option */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 8px; /* Rounded corners for better shape */
+    transition: background-color 0.3s; /* Animation for hover effect */
+}
+
+/* Hover effect for gender options */
+.gender-option:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
+}
+
+/* Hide the actual checkbox */
+.gender-checkbox {
+    display: none; /* Hides the default radio button */
+}
+
+/* Custom checkmark style */
+.checkmark {
+    width: 20px; /* Width of the checkmark */
+    height: 20px; /* Height of the checkmark */
+    border: 2px solid #ccc; /* Border for the checkmark */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 10px; /* Space between checkmark and text */
+    display: flex; /* Use flex for center alignment */
+    align-items: center; /* Center the tick */
+    justify-content: center; /* Center the tick */
+    transition: background-color 0.3s; /* Animation for background color */
+    
+}
+
+/* Checked state for the checkbox */
+.gender-checkbox:checked + .checkmark {
+    background-color: #4caf50; /* Background color for checked state */
+    border-color: #4caf50; /* Change border color */
+}
+
+/* Tick mark when checked */
+.gender-checkbox:checked + .checkmark::after {
+    content: "✔"; /* Unicode character for tick */
+    color: white; /* Color of the tick */
+    font-size: 16px; /* Size of the tick */
+}
+
+/* Style for the text */
+.gender-text {
+    font-size: 14px; /* Font size for the text */
+    color: white; /* Text color */
+}
+
+.back-home-btn {
+    margin-top: 20px; /* Space between form and button */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-home-btn:hover {
+    background-color: #555;
+}
+.search-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-bar {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* Adjust width as needed */
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+.welcome-text {
+    color: white;
+    font-size: 2rem; /* Adjust font size as desired */
+    text-align: center;
+    margin-top: 20px; /* Add spacing if needed */
+}
+.auth-container {
+    position: relative;
+}
+
+.phone-container {
+    margin-bottom: 40px;
+}
+
+.phone-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.phone-input-group input {
+    flex: 1;
+}
+
+.remember-forgot {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+.signup-link p{
+    color:white;
+}
+.login-link p{
+    color:white;
+}
+
+
+
+
+.input-box label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: white !important;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.input-box input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.input-box input[type="checkbox"]:checked {
+    background: #007bff;
+    border-color: #007bff;
+}
+
+.input-box input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.input-box label:hover input[type="checkbox"] {
+    border-color: #0056b3;
+}
+
+.input-box label:hover {
+    color: #0056b3;
+}
+
+button[type="submit"]{
+    margin-top: -70px;
+}
+
+
+
+button[type="button"] {
+    background-color: transparent; /* Green background color */
+    color: white; /* White text color */
+    padding: 12px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s ease; /* Smooth transition */
+    margin-top: 10px; /* Top margin for spacing */
+    border: 1px solid #fff; 
+}
+
+/* Hover effect */
+button[type="button"]:hover {
+    background-color: transparent; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Active button effect (when clicked) */
+button[type="button"]:active {
+    transform: scale(0.98); /* Slight shrinking on click */
+}

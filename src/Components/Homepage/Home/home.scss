@@ -1,0 +1,84 @@
+*root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+  }
+  
+  .home {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    position: relative; /* This ensures child elements can be absolutely positioned */
+    overflow: hidden; /* Prevents scrollbars from appearing */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(47, 106, 127, 0.6); /* Add transparency for better text visibility */
+    z-index: 1; /* Ensure the overlay is above the video but below the text */
+  }
+  
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full background */
+    z-index: 0; /* Video stays behind the overlay and text */
+  }
+  
+  .homeContent {
+    position: absolute; /* Absolutely position the content on top of the video */
+    top: 50%; /* Center the content vertically */
+    left: 50%; /* Center the content horizontally */
+    transform: translate(-50%, -50%); /* Correct the positioning to be perfectly centered */
+    z-index: 2; /* Ensure the content is on top of both the video and overlay */
+    text-align: center;
+    color: var(--whiteColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .textDiv {
+    padding: 2rem 0;
+  }
+  
+  .smallText {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .homeTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .homeTitle {
+      font-size: 2rem;
+    }
+  
+    .smallText {
+      font-size: 1rem;
+    }
+  }
+  

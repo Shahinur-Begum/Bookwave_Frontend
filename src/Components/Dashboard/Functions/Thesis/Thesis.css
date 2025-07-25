@@ -1,0 +1,85 @@
+.library-container {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9ff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #5e2ced;
+}
+
+header input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  margin: 5px 10px 5px 0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f0ebff;
+  color: #5e2ced;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter-buttons button:first-child {
+  background-color: #5e2ced;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+}
+
+th {
+  background-color: #5e2ced;
+  color: white;
+  font-weight: normal;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.topic-tag {
+  background-color: #ede9fe;
+  color: #5e2ced;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.actions a {
+  margin-right: 12px;
+  text-decoration: none;
+  color: #5e2ced;
+  font-weight: 500;
+}
+
+.actions .download {
+  color: green;
+}

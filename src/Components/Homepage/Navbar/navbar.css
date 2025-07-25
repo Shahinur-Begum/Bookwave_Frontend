@@ -1,0 +1,235 @@
+/* Basic styling for the header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--whiteColorDeam);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+}
+/* Logo Section */
+.logoDiv {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between the icon and text */
+  font-size: 6rem !important; /* Ensure font size is large */
+  white-space: nowrap;
+}
+
+/* Hamburger Icon */
+.toggleNavbar {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--PrimaryColor);
+}
+
+/* Book Icon */
+.home-icon {
+  font-size: 1.9rem !important; /* Increased size for the book icon */
+  color: var(--blackColor);
+}
+
+/* BookWave Text */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.9rem !important; /* Increased the font size of the BookWave text */
+  color: var(--blackColor);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Navbar actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Filter Button */
+.filter-button {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Filter Dropdown */
+.filterDropdown {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.filterOption {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 0.5px;
+}
+
+/* Login Button */
+.login-button {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+
+/* Sidebar positioning and hidden state */
+.navBar {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Hidden off-screen initially */
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Sidebar visible state when active */
+.activeNavbar {
+  left: 0; /* Slide-in effect from the left */
+}
+
+/* Sidebar list and items */
+.navLists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+.blurOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 999; /* Place it below the sidebar but above everything else */
+}
+
+
+.navItem {
+  list-style: none;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--textColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--PrimaryColor);
+}
+
+
+
+
+
+
+
+/* Search Form */
+.searchForm {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 740px;
+}
+
+.searchInputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.searchIcon {
+  color: #555;
+  margin-right: 8px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 250px;
+}
+
+.searchInput::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Filter Icon */
+.filterIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.filterIcon {
+  font-size: 24px;
+  color: #555;
+}
+
+/* Filter Dropdown */
+.filterDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  border-radius: 4px;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.filterGroup {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.filterOption {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.filterOption:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}

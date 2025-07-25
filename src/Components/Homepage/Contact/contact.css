@@ -1,0 +1,73 @@
+.contact-background {
+  background-color: #f0f0f0; /* Light grey fallback color */
+  background-image: url(../../../Assets/1000025696.jpg);
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Full viewport height for the page */
+  width: 100vw; /* Full viewport width for the page */
+  position: relative; /* Ensure the container can position child elements correctly */
+  padding-top: 80px;
+}
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto; /* Center the container */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    padding: 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    text-align: center; /* Center-align text */
+    margin-top: 50px;
+
+  }
+  
+  .contact-title {
+    font-size: 2.5em; /* Larger title */
+    margin-bottom: 10px; /* Space below title */
+    font-weight: bold; /* Bold title */
+    letter-spacing: 1px; /* Slight letter spacing */
+    color: #fff;
+  }
+  
+  .contact-subtitle {
+    font-size: 1.2em; /* Subtitle size */
+    margin-bottom: 20px; /* Space below subtitle */
+    font-style: italic; /* Italic style */
+    color: white;
+  }
+  
+  .contact-info {
+    text-align: left; /* Align info to the left */
+    color: #fff;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.5em; /* Info header size */
+    margin-bottom: 15px; /* Space below info header */
+    border-bottom: 2px solid #fff; /* Underline for emphasis */
+    padding-bottom: 5px; /* Padding below the line */
+    color: #fff;
+  }
+  
+  .contact-info p {
+    margin: 10px 0; /* Space between paragraphs */
+    font-size: 1.1em; /* Slightly larger font for info */
+  }
+  
+  .contact-info strong {
+    color: white;
+  } 
+  
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 2em; /* Responsive title size */
+      color: white;
+    }
+  
+    .contact-subtitle {
+      font-size: 1em; /* Responsive subtitle size */
+      color: white;
+    }
+  }
+  

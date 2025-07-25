@@ -1,0 +1,73 @@
+/* Root colors */
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --greyText: rgb(190, 190, 190);
+}
+
+.footer {
+  background-image: url('../../../Assets/1000025696.jpg'); 
+  background-size: cover; /* Ensures the image covers the whole footer */
+  background-position: center; /* Center the background image */
+  color: white; /* Change text color for better contrast */
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.footer-content {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space out the items */
+  align-items: flex-start; /* Align items at the top */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.quick-links {
+  flex: 1; /* Allow quick links section to take space */
+  margin-right: 20px; /* Add spacing */
+}
+
+.quick-links ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+}
+
+.quick-links li {
+  margin-bottom: 10px; /* Spacing between links */
+}
+
+.quick-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: #ffffff; /* White link color */
+  display: flex; /* Flex to align icon and text */
+  align-items: center; /* Center items vertically */
+}
+
+.quick-links i, .quick-links svg {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 18px; /* Icon size */
+}
+
+.quick-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.location, .map {
+  flex: 1; /* Allow both sections to take equal space */
+  margin-right: 20px; /* Add spacing between sections */
+  color:#ffffff !important;
+}
+.location p{
+  color:#ffffff !important;
+}
+
+.map {
+  margin-right: 0; /* Remove right margin for the last element */
+}
+.footer-content h2,
+.footer-content h3 {
+  color: var(--whiteColor) !important; /* White color for all headings within the footer content */
+}

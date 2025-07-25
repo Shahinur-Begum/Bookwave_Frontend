@@ -1,0 +1,504 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Admin Book Container */
+.admin-book-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Main Content Area */
+.admain-content {
+    margin-left: 250px; /* Ensure content is shifted to the right of the sidebar */
+    padding: 20px;
+    padding-left: 20px; /* Space between content and sidebar */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    flex-grow: 1;
+}
+
+/* Admin Welcome Bar Styling */
+.adbook-welcome-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #001f3f, #1a2a6c, #537895);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+    min-height: 50px;
+    width: calc(100% - 60px);
+    z-index: 1;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+/* Welcome Image Styling */
+.adbook-welcome-image {
+    width: 200px; /* Size of the image reduced */
+    height: 100%;
+    background-image: url('../../../../Assets/bookcatalogue.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Text Styling */
+.adbook-welcome-text {
+    color: white;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.adbook-welcome-text h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 2px white;
+    text-align: left;
+}
+
+.adbook-welcome-text p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    color: white;
+    text-align: left;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+/* Add Book Button Centering */
+.add-book-button {
+    margin-bottom: 20px;
+    align-self: center; /* Center align the button */
+    margin-left: 500px;
+}
+
+.add-book-button button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-book-button button:hover {
+    background-color: #218838;
+}
+
+/* Table Styles */
+.admin-book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    margin-left: 10px;
+}
+
+.admin-book-table th,
+.admin-book-table td {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Title Column (Assuming it is the first column) */
+.admin-book-table th:first-child,
+.admin-book-table td:first-child {
+    width: 10%; /* Reduce width for the title column */
+}
+
+/* Cover Image Column (Assuming it is the second column) */
+.admin-book-table th:nth-child(2),
+.admin-book-table td:nth-child(2) {
+    width: 25%; /* Increase width for the cover image column */
+}
+
+/* Styling for the title column */
+.admin-book-table th {
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+}
+
+.admin-book-table td {
+    background-color: #fff;
+}
+
+.admin-book-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Enlarged Book Cover Images */
+.admin-book-table td img {
+    width: 60% !important; /* Enlarge the book cover images */
+    height: 200px; /* Set a fixed height for book images */
+    border-radius: 5px;
+    object-fit: cover;
+    display: block; /* Make the image a block element to fill the cell */
+    margin: 0 auto;
+}
+
+/* Table Buttons */
+.admin-book-table button {
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-book-table button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.admin-book-table button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Add Book Dialog Styles */
+.add-book-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.dialog-content {
+    background-color: #fff;
+    width: 450px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.dialog-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+.dialog-content label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.dialog-content input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.dialog-content input[type="date"] {
+    padding: 8px;
+}
+
+.dialog-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.dialog-content button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+.dialog-content button:hover {
+    background-color: #0056b3;
+}
+
+.dialog-content button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust sidebar for smaller screens */
+    .admin-sidebar {
+        width: 200px; /* Smaller sidebar width */
+    }
+
+    .admain-content {
+        margin-left: 200px; /* Adjust main content margin to match sidebar width */
+    }
+
+    .admin-book-table {
+        font-size: 14px;
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .dialog-content {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .admin-welcome-text h1,
+    .admin-welcome-text p {
+        text-align: center;
+    }
+} 
+.booknavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-left: 280px;
+  }
+  
+  .booknavbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bookicon-button {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .profile-avatar {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  .booknavbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .booknavbar-search {
+    width: 50%;
+    max-width: 500px;
+    margin-right: 10px;
+    background-color: white !important;
+  }
+  
+  .category-filter {
+    background-color: white;
+    color: #1a1a1a;
+    min-width: 150px;
+    margin-left: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .booknavbar-center {
+      flex-direction: column;
+    }
+  
+    .booknavbar-search,
+    .category-filter {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .admin-search-bar-container {
+    position: relative; /* Ensures the suggestion box aligns to this container */
+  }
+  
+  .search-suggestions-box {
+    position: absolute; /* Positions it relative to the search bar */
+    margin-top: 100px;
+    left: 0; /* Aligns with the left edge of the search bar */
+    width: 50; /* Matches the width of the search bar */
+    background: #fff; /* Background for the suggestion box */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 4px; /* Rounded corners */
+    max-height: 200px; /* Limits the height of the box */
+    overflow-y: auto; /* Allows scrolling if content exceeds max-height */
+    z-index: 1000; /* Ensures it appears above other elements */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for visibility */
+    margin-left: 500px;
+  }
+  
+  .search-suggestion {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .search-suggestion:last-child {
+    border-bottom: none; /* Removes border for the last item */
+  }
+  
+  .search-suggestion img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 4px; /* Optional: rounded images */
+  }
+  
+  .search-suggestion:hover {
+    background: #f9f9f9; /* Highlight background on hover */
+  }
+  @media (max-width: 768px) {
+    .search-suggestions-box {
+      max-height: 150px; /* Reduce height on smaller screens */
+    }
+    .search-suggestion img {
+      width: 30px; /* Smaller images */
+    }
+  }
+    
+   /* Filter button styling */
+   .adfilter-button {
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+  }
+  
+  /* Filter dropdown styling */
+  .adfilter-dropdown {
+    position: absolute;
+    top: 60px; /* Adjust position to be below the navbar */
+    right: 400px; /* Position to align with filter button */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 100;
+    width: 150px;
+    margin-left: 200px;
+   
+  }
+  
+  .adsuggestions {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 400px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-left: 150px;
+    z-index: 2;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .adsuggestions h3 {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .adsuggestions ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .adsuggestions li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    color: black;  /* Ensures the book title text is black */
+    transition: background-color 0.3s ease;
+  }
+  
+  .adsuggestions li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .adsuggestions li img {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .adsuggestions li span {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+  .tabs {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #334d6e;
+    transition: background 0.3s;
+  }
+  
+  .tab:hover, .tab.active {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    color: white;
+  }
+ /* Icon Button Styling */
+.icon-button {
+  color: #b0b0b0 !important; /* Regular grey color for icons with !important */
+}
+
+
+.icon-button:hover {
+    color: #fff; /* White on hover */
+}
+.admin-search-bar {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 100px;
+  background-color:white;
+}

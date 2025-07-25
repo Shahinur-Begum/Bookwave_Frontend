@@ -1,0 +1,288 @@
+.welcome-bar {
+    display: flex;
+    align-items: center;
+    padding: 2px 10px; /* Very small padding for a tighter layout */
+    background: linear-gradient(135deg, #001f3f, #1a2a6c, #537895);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 20px;
+    z-index: 1;
+    min-height: 200px; /* Further reduce height */
+}
+
+.welcome-image {
+    width: 500px; /* Adjust to fit within the smaller bar */
+    margin-left: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 200px; /* Match the height of the bar */
+}
+.swelcome-image {
+    width: 800px; /* Adjust to fit within the smaller bar */
+    margin-left: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height:60 px; /* Match the height of the bar */
+}
+.csewelcome-image {
+    width: 400px; /* Adjust to fit within the smaller bar */
+    margin-left: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 150px; /* Match the height of the bar */
+}
+
+.welcome-text h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 45px; /* Slightly smaller heading */
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white;
+    color: white !important;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.welcome-text p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px; /* Slightly smaller text for compact fit */
+    margin: 3px 0;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.book-details-container {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center-aligns the content */
+    border: 1px solid #ddd; /* Adds a border around the whole container */
+    border-radius: 15px; /* Rounds the corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    background-color: #fff; /* White background for the entire container */
+}
+
+.back-link {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px; /* Slightly larger font */
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.bookdetail-cover {
+    margin-bottom: 30px; /* Adds space between cover and details */
+}
+
+.bookdetail-image {
+    width: 300%; /* Adjust the cover to be more centered */
+    max-width: 400px; /* Prevents it from getting too large */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow for better focus */
+    margin-left:30px; /* Center the image */
+}
+
+.book-info {
+    margin-top: 30px;
+    text-align: left; /* Aligns metadata and buttons to the left */
+    font-size: 18px; /* Larger overall font size */
+}
+
+.book-title {
+    font-size: 32px; /* Increased title font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.book-description {
+    font-size: 18px; /* Increased font size for better readability */
+    color: #555;
+    margin: 15px 0 25px;
+    line-height: 1.8; /* Better line spacing */
+}
+
+.book-metadata p {
+    font-size: 16px; /* Larger metadata font */
+    margin: 10px 0;
+}
+
+.available {
+    color: green;
+    font-weight: bold; /* Highlight availability */
+}
+
+.unavailable {
+    color: red;
+    font-weight: bold; /* Highlight unavailability */
+}
+
+.reserve-button {
+    padding: 12px 25px; /* Larger button */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Slightly more rounded corners */
+    cursor: pointer;
+    font-size: 16px; /* Larger button text */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reserve-button:hover {
+    background-color: #0056b3; /* Adds a hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.reserve-button.disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.reserved-message {
+    font-size: 18px; /* Slightly larger reserved message */
+    color: #28a745;
+    margin-top: 20px;
+}
+.book-table{
+    margin-left: 15px;
+}
+
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .books-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .book-card {
+    width: 300px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .book-info {
+    margin-top: 10px;
+  }
+  
+  .book-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .book-author {
+    font-size: 0.9rem;
+    color: #555;
+  }
+ 
+.books-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures each book takes at least 250px */
+    gap: 20px;
+    justify-items: center; /* Center-align items in each column */
+    margin-left: 20px;
+  }
+  
+  .book-card {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .book-cover {
+    width: 95%;
+    height: 82%;
+    border-radius: 8px;
+    max-height: 300px;
+    object-fit: cover; /* Ensure image fits properly within container */
+  }
+  
+  .book-info {
+    margin-top: 10px;
+  }
+  
+  .book-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .book-author {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .category-container {
+      padding: 15px;
+    }
+  
+    .book-card {
+      width: 100%; /* Full width for smaller screens */
+      padding: 15px;
+    }
+  
+    .books-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium-sized screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .books-grid {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+  }
+  .book-card.highlighted {
+    border: 2px solid #FFD700; /* Gold border for highlighting */
+    background-color: rgba(255, 215, 0, 0.1); /* Slight yellow background */
+  }
+  

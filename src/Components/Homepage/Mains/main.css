@@ -1,0 +1,248 @@
+/* main.css */
+
+/* Basic Styles for the Container */
+.container {
+  max-width: 1500px; /* Center the content and limit width */
+  margin: 0 auto; /* Centering the container */
+  padding: 20px; /* Padding for the container */
+
+}
+
+/* Section Header Styles */
+.secHeader {
+  display: flex;
+  justify-content: space-between; /* Aligns items to opposite sides */
+  align-items: center; /* Vertically center-aligns items */
+  margin-bottom: 50px; /* Space below each header */
+}
+
+/* Main Content Styles */
+.secContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 0px; /* Space between grid items */
+}
+
+/* Single Book/Challenge Card Styles */
+.singleBook {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  height: 400px; /* Set a fixed height for uniformity */
+}
+
+/* Image Div Styles */
+.imageDiv {
+  flex-grow: 1; /* Allows the image section to grow */
+  text-align: center;
+}
+
+.imageDiv img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Book/Challenge Details Styles */
+.bookDetails {
+  margin-top: 10px;
+  flex-grow: 2; /* Allows details section to fill the remaining space */
+}
+
+.bookDetails h4 {
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+
+.bookDetails p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Add bottom margin to separate sections */
+.secContent {
+  margin-bottom: 40px; /* Space below each content section */
+}
+/* main.css */
+
+/* Comment Form Styles */
+.commentForm {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  margin-top: 10px; /* Space above the form */
+  margin-bottom: 20px; /* Space below the form */
+}
+
+.commentForm textarea {
+  resize: none; /* Prevent resizing */
+  height: 100px; /* Fixed height for textarea */
+  margin-bottom: 10px; /* Space below textarea */
+  padding: 10px; /* Padding for textarea */
+  border: 1px solid #ccc; /* Border for textarea */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.commentForm input {
+  margin-bottom: 10px; /* Space below input */
+  padding: 10px; /* Padding for input */
+  border: 1px solid #ccc; /* Border for input */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.commentForm button {
+  background-color: #007BFF; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.commentForm button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Comment List Styles */
+.commentsList {
+  margin-top: 20px; /* Space above the comment list */
+}
+
+.commentItem {
+  background-color: #f9f9f9; /* Background for comment item */
+  border: 1px solid #ddd; /* Border for comment item */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding for comment item */
+  margin-bottom: 10px; /* Space between comments */
+}
+.librarySchedule {
+  margin-top: 20px; /* Space above the schedule */
+  padding: 10px; /* Padding for the schedule */
+  background-color: #f9f9f9; /* Light background color */
+  border: 1px solid #ccc; /* Border for the schedule */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.scheduleItem {
+  margin-bottom: 10px; /* Space between items */
+}
+
+.scheduleItem p {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Adjust font size */
+  color: #333; /* Text color */
+}
+.highlighted {
+  background-color: #f0f0f0;
+  border: 2px solid #007BFF; /* Blue border */
+}
+
+
+
+/* Add styles for Notices and Schedule sections */
+.secHeader {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.title {
+font-size: 1.8rem;
+font-weight: bold;
+color: #333 !important;
+text-transform: uppercase;
+border-bottom: 2px solid #444;
+padding-bottom: 10px;
+}
+
+.noticesList,
+.librarySchedule {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 20px;
+}
+
+.noticeItem,
+.scheduleItem {
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+padding: 15px;
+border-radius: 8px;
+transition: all 0.3s ease;
+}
+
+.noticeItem:hover,
+.scheduleItem:hover {
+background-color: #efefef;
+transform: translateY(-5px);
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.noticeDetails p {
+margin: 10px 0;
+}
+
+.noticeDate {
+font-style: italic;
+color: #777;
+}
+
+/* Adding icons for notices */
+.noticeItem:before {
+content: "📢"; /* Add an icon */
+font-size: 24px;
+margin-right: 10px;
+display: inline-block;
+vertical-align: middle;
+}
+
+/* Style for Schedule items */
+.scheduleItem {
+font-size: 1.1rem;
+padding: 12px;
+background-color: #f0f0f0;
+border-radius: 8px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.scheduleItem p {
+margin: 0;
+font-weight: 500;
+color: #444;
+}
+
+/* Schedule Day Font */
+.scheduleItem strong {
+font-size: 1.2rem;
+color: #2d9cdb;
+}
+
+/* Add some responsiveness for smaller screens */
+@media (max-width: 768px) {
+.noticesList,
+.librarySchedule {
+  grid-template-columns: 1fr;
+}
+}
+.reserveButton {
+background-color: #007bff;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+margin-top: 10px;
+transition: background-color 0.3s;
+}
+
+.reserveButton:hover {
+background-color: #0056b3;
+}
+
+.reserveButton:focus {
+outline: none;
+}

@@ -1,0 +1,207 @@
+/* General Page Styling */
+.payment-page {
+    max-width: 1500px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+  }
+  
+  .payment-details {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  .dues-amount {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 30px;
+  }
+  
+  .status {
+    margin-top: 15px;
+  }
+  
+  .status-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+  }
+  
+  .status-button.unpaid {
+    background-color: #e74c3c;
+  }
+  
+  .status-button.paid {
+    background-color: #27ae60;
+    cursor: default;
+  }
+  
+  /* Payment Options Section */
+  .payment-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .payment-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .pay-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pay-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .pay-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  .transaction-input {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .transaction-id-box {
+    padding: 10px;
+    margin: 10px 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .confirm-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-button:hover {
+    background-color: #218838;
+  }
+  .paywelcome-bar {
+    display: flex;
+    align-items: center;
+    padding: 2px 10px; /* Very small padding for a tighter layout */
+    background: linear-gradient(135deg, #001f3f, #1a2a6c, #537895);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 60px;
+    margin-right: 10px;
+    z-index: 1;
+    min-height: 150px; /* Further reduce height */
+    margin-top: 20px;
+}
+
+.paywelcome-image {
+    width: 400px; /* Adjust to fit within the smaller bar */
+    margin-left: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 100px; /* Match the height of the bar */
+}
+
+
+.paywelcome-text h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 60px; /* Slightly smaller heading */
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white;
+    color: white !important;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.paywelcome-text p {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px; /* Slightly smaller text for compact fit */
+    margin: 3px 0;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-options-row{
+  display: flex;
+  justify-content: space-between; /* Spread items evenly with space in between */
+  gap: 20px; /* Add consistent spacing between boxes */
+  margin-top: 20px;
+  width: 80%; /* Ensure the container takes full width */
+  margin-left: 150px;
+}
+
+.payment-option {
+  flex: 1; /* Make all boxes take the same amount of space */
+  max-width: 300px; /* Optional: Limit the maximum width */
+  height: 200px; /* Fix the height of all boxes */
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensure content is evenly spaced */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.payment-logo {
+  width: 80px;
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+.pay-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pay-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
